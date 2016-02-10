@@ -1,0 +1,13 @@
+<div ng-controller="threeInputCtrl">
+    <table>
+        <tr ng-repeat="item in [0,1]">
+            <td>Payment {{$index+1}} (EUR)</td>
+            <td><input ng-model="numbers[$index]" ng-change="updateUrl()" ng-model-options="{ debounce: 800 }"></td>
+        </tr>
+        <tr>
+            <td>Summ (EUR)
+            </td>
+            <td><md-summ></md-summ></td>
+        </tr>
+    </table>
+</div>
